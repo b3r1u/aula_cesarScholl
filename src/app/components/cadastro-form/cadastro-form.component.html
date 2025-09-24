@@ -1,0 +1,63 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="card">
+  <h2>Cadastro</h2>
+  <p class="subtitle">Preencha seus dados</p>
+
+  <div class="field">
+    <label>Nome Completo</label>
+    <input
+      formControlName="fullName"
+      type="text"
+      placeholder="Seu nome completo"
+    />
+    <small class="error" *ngIf="f['fullName'].touched && f['fullName'].invalid">
+      <span *ngIf="f['fullName'].errors?.['required']"
+        >Nome é obrigatório.</span
+      >
+      <span *ngIf="f['fullName'].errors?.['minlength']"
+        >Mínimo 3 caracteres.</span
+      >
+    </small>
+  </div>
+
+  <div class="field">
+    <label>Email</label>
+    <input formControlName="email" type="email" placeholder="seu@email.com" />
+    <small class="error" *ngIf="f['email'].touched && f['email'].invalid">
+      <span *ngIf="f['email'].errors?.['required']">Email obrigatório.</span>
+      <span *ngIf="f['email'].errors?.['email']">Formato inválido.</span>
+    </small>
+  </div>
+
+  <div class="field">
+    <label>Endereço</label>
+    <input
+      formControlName="endereco"
+      type="text"
+      placeholder="Rua, Nº, Bairro"
+    />
+    <small class="error" *ngIf="f['endereco'].touched && f['endereco'].invalid">
+      <span *ngIf="f['endereco'].errors?.['required']"
+        >Endereço obrigatório.</span
+      >
+      <span *ngIf="f['endereco'].errors?.['minlength']"
+        >Mínimo 5 caracteres.</span
+      >
+    </small>
+  </div>
+
+  <div class="field">
+    <label>CPF</label>
+    <input formControlName="cpf" type="text" placeholder="000.000.000-00" />
+    <small class="error" *ngIf="f['cpf'].touched && f['cpf'].invalid">
+      <span *ngIf="f['cpf'].errors?.['required']">CPF obrigatório.</span>
+      <span *ngIf="f['cpf'].errors?.['cpfInvalid']">CPF inválido.</span>
+    </small>
+  </div>
+
+  <div style="display: flex; gap: 10px; align-items: center; margin-top: 12px">
+    <button class="btn" type="submit">Enviar</button>
+    <button type="button" class="btn ghost" (click)="form.reset()">
+      Limpar
+    </button>
+  </div>
+</form>

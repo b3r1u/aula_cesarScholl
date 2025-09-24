@@ -1,0 +1,65 @@
+:host {
+  display: block;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  gap: 1rem;
+}
+
+h2 {
+  margin: 0 0 6px 0;
+  color: var(--blue-popsicle);
+}
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.field {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--grey-blue-leaf);
+}
+input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
+  color: inherit;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 4px 12px rgba(15, 40, 98, 0.12);
+}
+
+.error {
+  color: var(--redline);
+  font-size: 0.78rem;
+  margin-top: 6px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    var(--blue-popsicle),
+    var(--grey-blue-leaf)
+  );
+  color: white;
+  font-weight: 600;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}

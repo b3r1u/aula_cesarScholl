@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { Registro } from './model/registro.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'cadastro-angular';
+  registros: Registro[] = [];
+
+  onNewRegistro(data: Registro) {
+    this.registros.push(data);
+  }
 }

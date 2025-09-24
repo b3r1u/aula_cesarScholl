@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
+import { CadastroCardsComponent } from './components/cadastro-cards/cadastro-cards.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { CpfMaskPipe } from './pipes/cpf-mask.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, CadastroFormComponent, CadastroCardsComponent, CpfMaskPipe],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideNgxMask()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

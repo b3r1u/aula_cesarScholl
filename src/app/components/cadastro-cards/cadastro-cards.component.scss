@@ -1,0 +1,55 @@
+.profile-card {
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.06)
+  );
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+  margin-bottom: 1rem;
+  max-height: 180px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: linear-gradient(
+    180deg,
+    var(--blue-popsicle),
+    var(--grey-blue-leaf)
+  );
+  color: white;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+}
+
+h3 {
+  margin: 0;
+  color: var(--blue-popsicle);
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.info {
+  margin-top: 12px;
+  color: #dce7f8;
+  font-size: 0.9rem;
+}
