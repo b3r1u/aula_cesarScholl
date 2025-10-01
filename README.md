@@ -1,6 +1,31 @@
 # CadastroAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.20.
+Este repositório contém exemplos e práticas desenvolvidas durante as aulas de Angular, com foco em conceitos fundamentais do framework e boas práticas no desenvolvimento frontend.
+
+---
+
+## 📚 Resumo Geral das Aulas
+
+### Aula 1 - Teórica
+- Construção de um projeto em Angular
+- Estrutura de arquivos
+- Comandos CLI (criação de **componentes**, **services**, **pipes** e **models**)
+- Identificadores (ID)
+- Uso de componentes de forma genérica
+- Validators com **FormGroup**
+
+### Aula 2 - Services
+- Entender como funciona um **Service**
+- Estrutura de um **Service**
+- Como funciona na prática
+- Acesso a APIs e uso de documentações
+
+### Indicações de estudo
+- **RxJs**
+- **Angular Material**
+- **Npm**
+
+---
 
 ## Development server
 
