@@ -10,7 +10,11 @@
   </div>
 
   <div class="info">
-    <p><strong>Endereço:</strong>{{ registro.endereco }}</p>
+    <p>
+      <strong>Endereço: </strong>
+      {{ registro.endereco }},{{ registro.bairro }} -
+      {{ registro.localidade }} / {{ registro.uf }}
+    </p>
     <p><strong>CPF:</strong>{{ registro.cpf | cpfMask }}</p>
   </div>
 </div>

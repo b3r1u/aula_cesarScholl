@@ -8,9 +8,15 @@ import { CadastroCardsComponent } from './components/cadastro-cards/cadastro-car
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { CpfMaskPipe } from './pipes/cpf-mask.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, CadastroFormComponent, CadastroCardsComponent, CpfMaskPipe],
+  declarations: [
+    AppComponent,
+    CadastroFormComponent,
+    CadastroCardsComponent,
+    CpfMaskPipe,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,6 +24,7 @@ import { CpfMaskPipe } from './pipes/cpf-mask.pipe';
     ReactiveFormsModule,
     NgxMaskDirective,
     NgxMaskPipe,
+    HttpClientModule,
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent],

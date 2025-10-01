@@ -29,11 +29,42 @@
   </div>
 
   <div class="field">
+    <label>CEP</label>
+    <input
+      formControlName="cep"
+      type="text"
+      placeholder="00000-000"
+      mask="00000-000"
+      (input)="onCepChange()"
+    />
+    <small class="error" *ngIf="f['cep'].touched && f['cep'].invalid">
+      <span *ngIf="f['cep'].errors?.['required']">CEP obrigatório.</span>
+      <span *ngIf="f['cep'].errors?.['minlength']">Mínimo 8 caracteres.</span>
+    </small>
+  </div>
+
+  <div class="field">
+    <label>Bairro</label>
+    <input formControlName="bairro" type="text" readonly />
+  </div>
+
+  <div class="field">
+    <label>Cidade</label>
+    <input formControlName="localidade" type="text" readonly />
+  </div>
+
+  <div class="field">
+    <label>Estado</label>
+    <input formControlName="uf" type="text" readonly />
+  </div>
+
+  <div class="field">
     <label>Endereço</label>
     <input
       formControlName="endereco"
       type="text"
       placeholder="Rua, Nº, Bairro"
+      readonly
     />
     <small class="error" *ngIf="f['endereco'].touched && f['endereco'].invalid">
       <span *ngIf="f['endereco'].errors?.['required']"
@@ -47,7 +78,12 @@
 
   <div class="field">
     <label>CPF</label>
-    <input formControlName="cpf" type="text" placeholder="000.000.000-00" />
+    <input
+      formControlName="cpf"
+      type="text"
+      placeholder="000.000.000-00"
+      mask="000.000.000-00"
+    />
     <small class="error" *ngIf="f['cpf'].touched && f['cpf'].invalid">
       <span *ngIf="f['cpf'].errors?.['required']">CPF obrigatório.</span>
       <span *ngIf="f['cpf'].errors?.['cpfInvalid']">CPF inválido.</span>
